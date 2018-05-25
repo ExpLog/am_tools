@@ -26,6 +26,11 @@ def time_to_leave(credentials_json):
 @click.option("--dir", default=os.getcwd(), help="Directory containing .drl files.")
 @click.option("--filter", is_flag=True, help="Filters dependency components that only have a single rule id.")
 def rule_dependencies(path: str, filter_no_dep: bool):
+    """
+    Calculates rule dependencies in AM rules in the current directory.
+
+    Dependant rules should have ruleID=### in the dependency.
+    """
     components = dep.rule_dependencies_components(path, filter_no_dep)
     for comp in components:
         click.echo(comp)
