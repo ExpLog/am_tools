@@ -8,7 +8,7 @@ name_re = re.compile("ALMGR[A-Z]+-(\\d+)\\.drl")
 rule_id_re = re.compile("ruleID.*?(\\d+)")
 
 
-def rule_dependencies_components(path: str, filter_no_dep: True = bool) -> List[Set[str]]:
+def rule_dependencies_components(path: str, filter_no_dep: bool) -> List[Set[str]]:
     """
     Calculates the dependency groups of a set of drools rule files for Alarm Manager.
     """
