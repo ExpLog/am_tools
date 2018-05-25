@@ -11,7 +11,8 @@ import am_tools.time_to_leave as ttl
 @click.argument("credentials_path", type=click.STRING)
 def time_to_leave(credentials_json):
     """
-    Logins to asmill01/millenium and calculates at what time you should leave considering a 8 hour work day.
+    This program logs in to asmill01/millenium and calculates at what time you should leave
+    considering a 8 hour work day.
 
     The credentials_path should be the path to a json object file containing user and password fields. Note that the
     file should contain only one json object.
